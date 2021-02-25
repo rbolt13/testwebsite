@@ -1,0 +1,187 @@
+body{
+  font: 15px/1.5 Arial, helvetica, sans-serif;
+  padding:0;
+  margin:0;
+  background-color: #f2f2f2; /* background color*/
+}
+/*Global, can be applied anywhere*/
+.container{
+  width:80%;    /*could use pixels?*/
+  margin:auto;  /*add side margin*/
+  overflow: hidden; /*hides overflow so there is no side scroll bar*/
+}
+ul{ /*gets rid of bullet points, globally*/
+  margin:0;
+  padding:0;
+}
+
+.dark{
+  padding:15px;
+  background: #35424a;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button_1{
+  height:38px;
+  background: #41b6c4;
+  border:0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color:#000066;
+}
+
+/*header*/
+header{
+  background:#c7e9b4;     /*header color*/
+  color:#ffffff;          /*header text color*/
+  padding-top:30px;
+  min-height: 70px;
+  border-bottom: #41b6c4 3px solid; /*line under header box*/
+}
+header a{
+  color:#ffffff; /*color of link text*/
+  text-decoration: none; /*get rid of link underline*/
+  text-transform: uppercase; /*changes text to uppercase*/
+  font-size: 16px; /*size of link text in header*/
+}
+
+header li{ /*makes menu horizontal*/
+  float:left; /*align text left*/
+  display: inline; /*display all in one line*/
+  padding: 0 20px 0 20px /*Top right bottom left*/
+}
+ header #branding{ /*branding = "Randi Bolt Person Website"*/
+   float:left;
+ }
+ header #branding h1{
+   margin 0;
+ }
+header nav {
+  float:right; /*aligns text to the right*/
+  margin-top: 10px; /* moves text down*/
+}
+ header .highlight, header .current a{
+   color:#41b6c4;
+   font-weight: bold;
+ }
+header a:hover{
+  color:#2c7fb8;/*change color when hover over link*/
+  font-weight:bold; /*bold when hover over link*/
+}
+/*Showcase*/   /**/
+#showcase{
+  min-height:400px;
+  /*insert picture outside of CSS folder, and adjust X Y position*/
+  background:url('../img/phantomtollboothmap.png') no-repeat -10px -20px;
+  text-align:center;
+  color:#41b6c4;
+}
+#showcase h1{
+  margin-top:40px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#showcase p{
+  font-size:20px;
+}
+
+/*newsletter*/
+#newsletter{
+  padding:15px;
+  color:#ffffff;
+  background:#c7e9b4;
+}
+#newsletter h1{
+  float:left;
+}
+#newsletter form{
+  float:right;
+  margin-top: 15px;
+}
+#newsletter input[type=email]{
+  padding:4px;
+  height:25px;
+  width:250px;
+}
+
+/*Boxes*/
+#boxes{
+  margin-top:20px;
+}
+#boxes .box{
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+}
+#boxes .box img{
+  width: 90px;
+}
+/*sidebar*/
+aside#sidebar {
+  float:right;
+  width:30%;
+  margin-top: 10px;
+}
+
+aside#sidebar .quote input,aside#sidebar .quote textarea{
+  width: 90%;
+  padding: 5px;
+}
+
+/*Main Col*/
+article#main-col{
+  float:left;
+  width:65%;
+}
+/*blog*/
+ul#blog li{
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #e6e6e6;
+}
+
+footer{
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #41b6c4;
+  text-align: center;
+}
+
+/* Media Queries*/
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes.box,
+  article#main-col,
+  aside#sidebar{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+header{
+  padding-bottom: 20px;
+}
+
+#showcase h1{
+  margin-top: 40px;
+}
+#newsletter button, .quote button{
+  display: block;
+  width: 100%;
+}
+
+#newsletter form input[type="email"], .quote input, .quote textarea{
+  width: 100%;
+  margin-bottom: 5px;
+}
